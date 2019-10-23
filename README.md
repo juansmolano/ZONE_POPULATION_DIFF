@@ -9,6 +9,17 @@ Before use do an
 3. run ``` node ZonePopulationFileImporter.js ```
 
 ## Run diff checker:
+
+Link to remote DB  
+
+connect kubectl
+``` gcloud container clusters get-credentials kec-main --zone us-central1-a --project supervanplus ```
+
+port forward
+```kubectl port-forward lgx-ope-mongo-5bf586864f-dwv4j  27017:27017```
+
+start the process
+
 ``` node server.js ```
 
 ## Changing Distribution Center

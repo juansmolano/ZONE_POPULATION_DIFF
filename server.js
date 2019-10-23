@@ -15,16 +15,16 @@ ZonePopulationDA.start$().pipe(
         generateMapFromFile$
     )),
 
-    tap( ([dbMap, fileMap]) => {
-        console.log('%%%%%%%%%%%%')
-        console.log(dbMap['010007, MEDELLIN , 1, MEDELLIN, MARKETING'])
-        console.log('%%%%%%%%%%%%')
-        console.log(Object.keys(dbMap).join('\n'));
-        console.log('%%%%%%%%%%%%')
-        console.log('%%%%%%%%%%%%')
-        console.log(Object.keys(fileMap).join('\n'));
-        console.log('%%%%%%%%%%%%')
-    }),
+    // tap( ([dbMap, fileMap]) => {
+    //     console.log('%%%%%%%%%%%%')
+    //     console.log(dbMap['010007, MEDELLIN , 1, MEDELLIN, MARKETING'])
+    //     console.log('%%%%%%%%%%%%')
+    //     console.log(Object.keys(dbMap).join('\n'));
+    //     console.log('%%%%%%%%%%%%')
+    //     console.log('%%%%%%%%%%%%')
+    //     console.log(Object.keys(fileMap).join('\n'));
+    //     console.log('%%%%%%%%%%%%')
+    // }),
 
     tap( ([dbMap, fileMap]) => {
         const notFoundList = Object.keys(dbMap).filter(dbKey => !fileMap[dbKey]);
